@@ -20,7 +20,7 @@
 
             body {
                 font-family: 'Berkshire Swash', Georgia, serif;
-                padding: 8px 16px 85px 16px;
+                padding: 8px 16px 77px 16px;
                 background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -162,28 +162,28 @@
                 animation: fadeInUp 0.8s ease-out 0.4s backwards;
             }
 
-            /* Expanded Answer Box with Internal Scroll to keep page height locked */
+            /* Expanded Answer Box - Compact & Scroll-Contained */
             .faq-content {
                 background: rgba(0, 0, 0, 0.85);
                 border: 2px solid #006b3f;
                 border-radius: 12px;
                 padding: 6px 10px;
-                margin-top: 6px;
+                margin-top: 4px;
                 text-align: left;
                 font-size: 0.75rem;
-                line-height: 1.4;
+                line-height: 1.3;
                 color: #f0f0f0;
                 text-shadow: 1px 1px 4px #000;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
                 box-sizing: border-box;
-                max-height: 145px; /* Locks open answers so they never cause page scrolling */
+                max-height: 145px;
                 overflow-y: auto;
                 scrollbar-width: thin;
                 animation: fadeIn 0.25s ease-in-out;
             }
 
             .faq-content p {
-                margin: 0 0 8px 0;
+                margin: 0 0 4px 0;
             }
 
             .faq-content p:last-child {
@@ -200,30 +200,25 @@
             }
 
             .faq-content ul, .faq-content dl {
-                margin: 4px 0 0 0;
-                padding-left: 15px;
+                margin: 2px 0 0 0;
+                padding-left: 12px;
             }
 
-            .faq-content li {
-                margin-bottom: 4px;
+            .faq-content li, .faq-content dd {
+                margin-bottom: 2px;
             }
 
             .faq-content dt {
                 font-weight: bold;
-                margin-top: 6px;
+                margin-top: 4px;
                 color: #fff;
-            }
-
-            .faq-content dd {
-                margin-left: 10px;
-                margin-bottom: 4px;
             }
 
             .show-list-container {
                 max-height: 95px;
                 overflow-y: auto;
                 scrollbar-width: thin;
-                padding-right: 5px;
+                padding-right: 4px;
             }
 
             /* Keyframe Animations */
@@ -280,7 +275,7 @@
             </div>
 
             <!-- Question 1: What is TX -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">What Is Theatre Xavier?</summary>
                 <div class="faq-content">
                     <p>Theatre Xavier is a place where students can learn how to act in a character, run the stage, make goofy costumes, tweak some lights, or amplify the sound!</p>
@@ -288,7 +283,7 @@
             </details>
 
             <!-- Question 2: Outcome -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">What is the outcome of Theatre Xavier?</summary>
                 <div class="faq-content">
                     <p>At Theatre Xavier, we help students find the thing that helps them find their voice and learn to develop healthy, long-lasting friendships with the people they work with.</p>
@@ -296,7 +291,7 @@
             </details>
 
             <!-- Question 3: Frequency -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">How often do we produce shows?</summary>
                 <div class="faq-content">
                     <p>We produce two shows a year; typically, we produce a comedy or play in the fall. In the spring, we produce a musical, and once in a while, we might produce a third show or interactive performance in January.</p>
@@ -304,7 +299,7 @@
             </details>
 
             <!-- Question 4: Who can join -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">Who can sign up?</summary>
                 <div class="faq-content">
                     <p>Any high school student from any school can sign up for Theatre Xavier! We have approximately 70–100 students participate in Theatre Xavier, with 80% of participants being male.</p>
@@ -312,7 +307,7 @@
             </details>
 
             <!-- Question 5: How to sign up -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">How can I sign up for Theatre Xavier?</summary>
                 <div class="faq-content">
                     <p>To sign up for Theatre Xavier, visit <a href="https://theatrexavier.ludus.com/" target="_blank">theatrexavier.ludus.com</a> and tap "Register for TX". Then, complete the form to sign up.</p>
@@ -321,7 +316,7 @@
             </details>
 
             <!-- Question 6: Contacts -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">Questions About Signing Up?</summary>
                 <div class="faq-content">
                     <dl>
@@ -338,7 +333,7 @@
             </details>
 
             <!-- Question 7: Past Shows -->
-            <details class="faq-dropdown">
+            <details class="faq-dropdown" name="faq-group">
                 <summary class="faq-summary">Past Shows at Theatre Xavier</summary>
                 <div class="faq-content">
                     <p>Here are the productions we have put on over the past few years:</p>
