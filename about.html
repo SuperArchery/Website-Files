@@ -13,13 +13,14 @@
             html, body {
                 margin: 0;
                 padding: 0;
-                min-height: 100vh;
+                height: 100dvh;
+                box-sizing: border-box;
+                overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
             }
 
             body {
                 font-family: 'Berkshire Swash', Georgia, serif;
-                padding: 20px;
-                box-sizing: border-box;
+                padding: 8px 16px 70px 16px;
                 background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -27,6 +28,7 @@
                 background-attachment: fixed;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 text-align: center;
                 color: #fff;
             }
@@ -64,21 +66,24 @@
             /* Container for Page Content */
             .main-content {
                 max-width: 700px;
-                margin: 15px auto;
+                margin: 4px auto;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px; /* Tighter gap so everything fits on one screen */
             }
 
-            /* Return to Main Menu Button & Accordion Summaries Base Animations */
+            /* Return to Main Menu Button & Accordion Summaries Base */
             .back-btn, summary.faq-summary {
                 display: block;
                 width: 100%;
                 max-width: 500px;
-                margin: 10px auto 15px auto;
-                padding: 14px 20px;
-                border-radius: 20px;
+                margin: 0 auto;
+                padding: 8px 14px;
+                border-radius: 14px;
                 color: #fff;
                 font-family: 'Berkshire Swash', Georgia, serif;
-                font-size: 1.05rem;
+                font-size: 0.95rem;
                 text-shadow: 2px 2px 6px #000;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
                 box-sizing: border-box;
@@ -93,7 +98,7 @@
                 background-color: #006b3f;
                 border: 3px solid #fff;
                 text-decoration: none;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 animation: fadeInUp 0.8s ease-out 0.2s backwards;
             }
 
@@ -120,7 +125,7 @@
                 .back-btn:hover, summary.faq-summary:hover {
                     background-color: rgba(0, 107, 63, 0.85);
                     border-color: #8edaa8;
-                    transform: translateY(-3px) scale(1.02);
+                    transform: translateY(-2px) scale(1.01);
                     box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
                 }
             }
@@ -129,14 +134,14 @@
             .intro-box {
                 width: 100%;
                 max-width: 500px;
-                margin: 0 auto 15px auto;
+                margin: 0 auto;
                 background: rgba(0, 0, 0, 0.65);
                 border: 2px solid #006b3f;
-                border-radius: 12px;
-                padding: 12px 18px;
+                border-radius: 10px;
+                padding: 6px 12px;
                 text-align: center;
-                font-size: 0.95rem;
-                line-height: 1.5;
+                font-size: 0.82rem;
+                line-height: 1.3;
                 color: #f0f0f0;
                 text-shadow: 1px 1px 4px #000;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
@@ -152,30 +157,33 @@
             details.faq-dropdown {
                 width: 100%;
                 max-width: 500px;
-                margin: 12px auto;
+                margin: 0 auto;
                 box-sizing: border-box;
                 animation: fadeInUp 0.8s ease-out 0.4s backwards;
             }
 
-            /* Expanded Answer Box */
+            /* Expanded Answer Box with Internal Scroll to keep page height locked */
             .faq-content {
-                background: rgba(0, 0, 0, 0.75);
+                background: rgba(0, 0, 0, 0.85);
                 border: 2px solid #006b3f;
-                border-radius: 14px;
-                padding: 16px 20px;
-                margin-top: 8px;
+                border-radius: 12px;
+                padding: 8px 12px;
+                margin-top: 6px;
                 text-align: left;
-                font-size: 0.95rem;
-                line-height: 1.6;
+                font-size: 0.8rem;
+                line-height: 1.4;
                 color: #f0f0f0;
                 text-shadow: 1px 1px 4px #000;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
                 box-sizing: border-box;
+                max-height: 165px; /* Locks open answers so they never cause page scrolling */
+                overflow-y: auto;
+                scrollbar-width: thin;
                 animation: fadeIn 0.25s ease-in-out;
             }
 
             .faq-content p {
-                margin: 0 0 10px 0;
+                margin: 0 0 8px 0;
             }
 
             .faq-content p:last-child {
@@ -192,27 +200,27 @@
             }
 
             .faq-content ul, .faq-content dl {
-                margin: 8px 0 0 0;
+                margin: 4px 0 0 0;
                 padding-left: 15px;
             }
 
             .faq-content li {
-                margin-bottom: 6px;
+                margin-bottom: 4px;
             }
 
             .faq-content dt {
                 font-weight: bold;
-                margin-top: 8px;
+                margin-top: 6px;
                 color: #fff;
             }
 
             .faq-content dd {
                 margin-left: 10px;
-                margin-bottom: 6px;
+                margin-bottom: 4px;
             }
 
             .show-list-container {
-                max-height: 220px;
+                max-height: 110px;
                 overflow-y: auto;
                 scrollbar-width: thin;
                 padding-right: 5px;
@@ -238,17 +246,15 @@
             .footer {
                 color: #fff;
                 text-align: center;
-                font-size: 0.9rem;
-                padding: 12px 16px;
-                border-radius: 10px;
-                margin-top: auto;
+                font-size: 0.78rem;
+                padding: 8px 12px;
+                border-radius: 8px;
                 background: rgba(0, 0, 0, 0.5);
                 text-shadow: 2px 2px 6px #000;
-                line-height: 1.5;
+                line-height: 1.4;
                 width: 100%;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
+                max-width: 550px;
+                margin: 0 auto;
                 box-sizing: border-box;
                 animation: fadeIn 1s ease-out 0.6s backwards;
             }
