@@ -14,13 +14,11 @@
             body {
                 margin: 0;
                 padding: 0;
-                min-height: 100vh;
-            }
-
-            body {
-                font-family: 'Berkshire Swash', Georgia, serif;
-                padding: 20px;
+                height: 100dvh;
                 box-sizing: border-box;
+                overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
+                font-family: 'Berkshire Swash', Georgia, serif;
+                padding: 16px;
                 background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -28,47 +26,42 @@
                 background-attachment: fixed;
                 display: flex;
                 flex-direction: column;
+                height: 100dvh;
+                justify-content: space-between; /* Spreads header, content, and footer evenly */
             }
 
             h1 {
-                margin: 0;
+                margin: 10px 0 0 0;
                 text-align: center;
-                overflow: hidden;
                 animation: fadeInDown 0.8s ease-out forwards;
             }
 
             .sign-img {
                 display: block;
                 margin: 0 auto;
-                width: 1000px;
-                max-width: 100%;
+                width: 100%;
+                max-width: 650px;
                 height: auto;
-                aspect-ratio: 5 / 1;
                 object-fit: cover;
-                object-position: center 26%;
-                position: relative;
-                left: 3%;
+                object-position: center;
                 filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
             }
 
-            h2 {
-                color: #fff;
-                font-family: 'Berkshire Swash', Georgia, serif;
-                text-shadow: 2px 2px 6px #000;
-                text-align: center;
+            .sign-home {
+                aspect-ratio: 3.25 / 1;
             }
 
             .intro {
                 color: #fff;
-                font-size: 0.9rem;
-                line-height: 1.5;
+                font-size: 0.85rem;
+                line-height: 1.4;
                 text-align: center;
                 text-shadow: 2px 2px 6px #000;
-                max-width: 600px;
-                margin: 20px auto 0;
+                max-width: 650px;
+                margin: 12px auto;
                 background: rgba(0, 0, 0, 0.5);
-                padding: 12px 16px;
-                border-radius: 10px;
+                padding: 6px 10px;
+                border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
                 animation: fadeInUp 0.8s ease-out 0.2s backwards;
             }
@@ -77,58 +70,47 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 16px;
-                margin-top: 30px;
+                gap: 12px; /* Tighter gap so buttons fit without scrolling */
+                margin: 16px 0;
                 animation: fadeInUp 0.8s ease-out 0.4s backwards;
             }
 
             .card {
                 display: block;
                 width: 100%;
-                max-width: 500px;
-                padding: 14px 20px;
+                max-width: 450px;
+                padding: 8px 16px;
                 background-color: rgba(0, 0, 0, 0.6);
                 border: 3px solid #fff;
-                border-radius: 20px;
+                border-radius: 16px;
                 text-decoration: none;
                 text-align: center;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
                 box-sizing: border-box;
-                transition:
-                    transform 0.25s ease,
-                    background-color 0.25s ease,
-                    box-shadow 0.25s ease,
-                    border-color 0.25s ease;
+                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+                -webkit-tap-highlight-color: transparent;
             }
 
             .card h2 {
                 margin: 0;
-                font-size: 1.1rem;
-            }
-
-            /* Enhanced hover and tap animation */
-            .card:hover,
-            .card:active {
-                background-color: rgba(0, 107, 63, 0.85);
-                border-color: #8edaa8;
-                transform: translateY(-4px) scale(1.02);
-                box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
+                font-size: 1rem;
+                color: #fff;
+                font-family: 'Berkshire Swash', Georgia, serif;
+                text-shadow: 2px 2px 6px #000;
             }
 
             .footer {
                 color: #fff;
                 text-align: center;
-                font-size: 0.9rem;
-                padding: 12px 16px;
-                border-radius: 10px;
-                margin-top: auto;
+                font-size: 0.8rem;
+                padding: 6px 10px;
+                border-radius: 8px;
                 background: rgba(0, 0, 0, 0.5);
                 text-shadow: 2px 2px 6px #000;
-                line-height: 1.5;
+                line-height: 1.4;
                 width: 100%;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
+                max-width: 550px;
+                margin: 0 auto 82px auto;
                 box-sizing: border-box;
                 animation: fadeIn 1s ease-out 0.6s backwards;
             }
@@ -139,96 +121,47 @@
 
             /* Keyframe animations */
             @keyframes fadeInDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-15px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+                from { opacity: 0; transform: translateY(-15px); }
+                to { opacity: 1; transform: translateY(0); }
             }
 
             @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(15px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+                from { opacity: 0; transform: translateY(15px); }
+                to { opacity: 1; transform: translateY(0); }
             }
 
             @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
+                from { opacity: 0; }
+                to { opacity: 1; }
             }
 
             @media (max-width: 600px) {
                 .sign-img {
-                    width: 220%;
+                    width: 96%;
                     max-width: none;
-                    margin: 0 0 0 -53%;
-                    left: 0;
+                    margin: 0 auto;
                 }
             }
 
-            /* Triggers on desktop mouse hover and mobile finger tap */
-            .card:hover,
-            .card:active,
-            summary.faq-summary:hover,
-            summary.faq-summary:active,
-            .back-btn:hover,
-            .back-btn:active {
-                background-color: rgba(0, 107, 63, 0.85);
-                border-color: #8edaa8;
-                transform: translateY(-4px) scale(1.02);
-                box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
-            }
-
-            /* Base styles for all devices (mobile and tap-first) */
-            .card,
-            summary.faq-summary,
-            .back-btn {
-                transition:
-                    transform 0.2s ease,
-                    background-color 0.2s ease,
-                    box-shadow 0.2s ease;
-                -webkit-tap-highlight-color: transparent;
-            }
-
-            /* Active state for instant mobile tap feedback */
-            .card:active,
-            summary.faq-summary:active,
-            .back-btn:active {
+            /* Active & Hover states */
+            .card:active {
                 transform: scale(0.98);
                 background-color: rgba(0, 107, 63, 0.9);
             }
 
-            /* Hover effects only for devices with a real mouse cursor */
             @media (hover: hover) {
-                .card:hover,
-                summary.faq-summary:hover,
-                .back-btn:hover {
+                .card:hover {
                     background-color: rgba(0, 107, 63, 0.85);
                     border-color: #8edaa8;
-                    transform: translateY(-4px) scale(1.02);
-                    box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
+                    transform: translateY(-2px) scale(1.01);
+                    box-shadow: 0 6px 16px rgba(0, 107, 63, 0.6);
                 }
             }
         </style>
     </head>
     <body>
         <h1>
-            <img src="tx-macbeth-sign-2.png" alt="Theatre Xavier" class="sign-img">
+            <img src="tx-macbeth-sign-2.png" alt="Theatre Xavier" class="sign-img sign-home">
         </h1>
 
         <p class="intro">
@@ -240,9 +173,11 @@
             <a href="about.html" class="card">
                 <h2>About Theatre Xavier</h2>
             </a>
+            
             <a href="why.html" class="card">
                 <h2>Why Theatre Xavier?</h2>
             </a>
+
             <a href="roles.html" class="card">
                 <h2>Roles in Theatre Xavier</h2>
             </a>
