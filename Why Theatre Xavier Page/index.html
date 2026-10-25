@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Theatre Xavier?</title>
+
+    <link rel="icon" type="image/png" href="tx-logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+    <style>
+        
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Berkshire Swash', Georgia, serif;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: clamp(14px, 3.2vh, 32px) clamp(12px, 5.2vw, 30px);
+    background: #edf0f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.page-shell {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: min(100%, 560px);
+    min-height: 90vh;
+    min-height: 90dvh;
+    transform: translateY(16px);
+    padding: clamp(14px, 3.2vh, 32px) 14px 14px;
+    overflow: hidden;
+    background-color: #171a19;
+    background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #8edaa8;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(35, 45, 60, 0.12);
+}
+
+/* TITLE: centered at the top */
+h1 {
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 0;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 0;
+    animation: fadeInDown 0.8s ease-out both;
+}
+
+.sign-img {
+    display: block;
+    width: 76%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+}
+
+/* MAIN CONTENT: centered directly beneath the sign */
+.main-content {
+    width: 100%;
+    max-width: 500px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* RETURN BUTTON: immediately below the title */
+.back-btn {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 9px 12px;
+    background: #356747;
+    border: 2.5px solid #fff;
+    border-radius: 16px;
+    color: #fff;
+    font-family: 'Berkshire Swash', Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* DIRECTIONS: centered between the menu button and names */
+.intro-box {
+    width: 100%;
+    margin: 0;
+    padding: 9px 12px;
+    background: rgba(0, 0, 0, 0.82);
+    border: 2px solid #006b3f;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.intro-box p {
+    margin: 0;
+}
+
+/* NAMES: centered in two equal columns directly below directions */
+.members-grid {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 6px;
+    row-gap: 6px;
+    align-items: start;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+details.faq-dropdown {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+summary.faq-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 5px 4px;
+    background: rgba(0, 0, 0, 0.84);
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #fff;
+    font-family: 'Berkshire Swash', Georgia, serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+summary.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* MEMBER STORIES */
+.faq-content {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.94);
+    border: 2px solid #006b3f;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    overflow-wrap: anywhere;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.faq-content p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* INTERACTIONS */
+.back-btn:active,
+summary.faq-summary:active {
+    transform: scale(0.98);
+    background-color: #006b3f;
+}
+
+@media (hover: hover) {
+    .back-btn:hover,
+    summary.faq-summary:hover {
+        background-color: #006b3f;
+        border-color: #8edaa8;
+        transform: scale(1.01);
+    }
+}
+
+/* FOOTER: stays below the content at the bottom */
+.footer {
+    width: 100%;
+    max-width: 500px;
+    margin: auto auto 0;
+    padding: 7px 10px;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.72rem;
+    line-height: 1.3;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 360px) {
+    body {
+        padding: 8px;
+    }
+
+    h1 {
+        margin-bottom: 6px;
+    }
+
+    .main-content {
+        gap: 6px;
+    }
+
+    .page-shell {
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .members-grid {
+        column-gap: 4px;
+        row-gap: 5px;
+    }
+
+    summary.faq-summary {
+        min-height: 44px;
+        padding: 5px 2px;
+        font-size: 0.72rem;
+    }
+
+    .intro-box {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-box {
+        margin-top: 6px;
+    }
+
+    .members-grid {
+        max-width: 360px;
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 6px;
+        margin-inline: auto;
+    }
+
+    summary.faq-summary {
+        min-height: 46px;
+    }
+}
+
+@media (max-width: 480px) and (min-height: 850px) {
+    body {
+        padding: 0;
+    }
+
+    .page-shell {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 12px 10px 10px;
+        border-radius: 0;
+        transform: none;
+    }
+
+    h1 {
+        margin-bottom: 4px;
+    }
+
+    .sign-img {
+        width: 68%;
+    }
+
+    .main-content {
+        gap: 5px;
+    }
+
+    .intro-box {
+        padding: 7px 10px;
+    }
+
+    .members-grid {
+        row-gap: 4px;
+    }
+
+    summary.faq-summary {
+        min-height: 40px;
+        padding: 4px;
+        font-size: 0.74rem;
+        line-height: 1.1;
+    }
+
+    .footer {
+        padding: 5px 8px;
+        font-size: 0.66rem;
+    }
+
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="page-shell">
+
+    <!-- TITLE -->
+    <h1>
+        <img
+            src="tx-macbeth-why-theatre-xavier-sign.png"
+            alt="Why Theatre Xavier?"
+            class="sign-img"
+        >
+    </h1>
+
+    <main class="main-content">
+
+        <!-- MENU BUTTON: DIRECTLY BELOW THE TITLE -->
+        <a href="index.html" class="back-btn">
+            Return to Main Menu
+        </a>
+
+        <!-- DIRECTIONS: CENTERED BETWEEN BUTTON AND NAMES -->
+        <div class="intro-box">
+            <p>
+                Curious why students join Theatre Xavier?
+                Tap a member below to read their stories!
+            </p>
+        </div>
+
+        <!-- MEMBER NAMES: CENTERED IN TWO COLUMNS -->
+        <div class="members-grid">
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Anna Thornburg '27</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Lady Macbeth</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because it seemed like a very welcoming community, the shows were awesome quality, and I am so glad I joined!"</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Jack Olson '29</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Second Witch</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I saw how much people really loved it and how it created such a beautiful community, and I really wanted to be a part of something so special!"</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Tom Cronin '28</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Costumes &amp; Makeup</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because I love theater, and seeing my sister's experience made me want to get involved too."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Dario Sedler '29</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Sound Design</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because I had a friend recommend it to me (Nolan Linberg) and I wanted to learn how to talk to anyone in order to prepare for college and the workplace."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Abraham Curran '29</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Lighting</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I attended the first org meeting to learn more about our options. Stage &amp; Building sounded like a great fit, so I decided to join!"</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Urban Owens '27</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Stage &amp; Building</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because I wanted the experience of being part of a tight-knit community devoted to creating a massive, beautiful work of art."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Keller Smith '29</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Stage &amp; Building</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because I loved the community of people who all show care towards each other and aren't afraid of being themselves."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Keegan Linberg '27</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Stage Management</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because it is a community where passion, talent, and camaraderie fuse to create something spectacular and special."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Timmy Donovan '29</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Stage Management</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because of the love I have for theatre and the great awe from seeing my first show."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Charlotte McPeek '28</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Front of House</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"TX opened up a space for me to be myself and get to come back to the things I love: people and theater."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Brooks Willmarth '27</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Costumes &amp; Makeup</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX because I enjoy telling stories through the art of acting."</p>
+                </div>
+            </details>
+
+            <details class="faq-dropdown">
+                <summary class="faq-summary">
+                    <span>Kaitlyn Kane '28</span>
+                    <span style="font-size:0.72rem;color:#8edaa8;">Front of House</span>
+                </summary>
+                <div class="faq-content">
+                    <p>"I joined TX after Jack and Drew introduced me to it. After seeing Hadestown, I immediately fell in love with it."</p>
+                </div>
+            </details>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>
+            This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.
+        </p>
+    </footer>
+
+    </div>
+
+    <!-- AUTOMATICALLY CLOSE OTHER MEMBER STORIES -->
+    <script>
+        const allDropdowns = document.querySelectorAll('.faq-dropdown');
+
+        allDropdowns.forEach(dropdown => {
+            dropdown.addEventListener('toggle', () => {
+                if (dropdown.open) {
+                    allDropdowns.forEach(other => {
+                        if (other !== dropdown) {
+                            other.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

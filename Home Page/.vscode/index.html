@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Theatre Xavier - Macbeth</title>
+        <link rel="icon" type="image/png" href="tx-logo.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+            }
+
+            body {
+                font-family: 'Berkshire Swash', Georgia, serif;
+                padding: 20px;
+                box-sizing: border-box;
+                background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                margin: 0;
+                text-align: center;
+                overflow: hidden;
+                animation: fadeInDown 0.8s ease-out forwards;
+            }
+
+            .sign-img {
+                display: block;
+                margin: 0 auto;
+                width: 1000px;
+                max-width: 100%;
+                height: auto;
+                aspect-ratio: 5 / 1;
+                object-fit: cover;
+                object-position: center 26%;
+                position: relative;
+                left: 3%;
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+            }
+
+            h2 {
+                color: #fff;
+                font-family: 'Berkshire Swash', Georgia, serif;
+                text-shadow: 2px 2px 6px #000;
+                text-align: center;
+            }
+
+            .intro {
+                color: #fff;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                text-align: center;
+                text-shadow: 2px 2px 6px #000;
+                max-width: 600px;
+                margin: 20px auto 0;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 12px 16px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+                animation: fadeInUp 0.8s ease-out 0.2s backwards;
+            }
+
+            .cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                margin-top: 30px;
+                animation: fadeInUp 0.8s ease-out 0.4s backwards;
+            }
+
+            .card {
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                padding: 14px 20px;
+                background-color: rgba(0, 0, 0, 0.6);
+                border: 3px solid #fff;
+                border-radius: 20px;
+                text-decoration: none;
+                text-align: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                box-sizing: border-box;
+                transition:
+                    transform 0.25s ease,
+                    background-color 0.25s ease,
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease;
+            }
+
+            .card h2 {
+                margin: 0;
+                font-size: 1.1rem;
+            }
+
+            /* Enhanced hover and tap animation */
+            .card:hover,
+            .card:active {
+                background-color: rgba(0, 107, 63, 0.85);
+                border-color: #8edaa8;
+                transform: translateY(-4px) scale(1.02);
+                box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
+            }
+
+            .footer {
+                color: #fff;
+                text-align: center;
+                font-size: 0.9rem;
+                padding: 12px 16px;
+                border-radius: 10px;
+                margin-top: auto;
+                background: rgba(0, 0, 0, 0.5);
+                text-shadow: 2px 2px 6px #000;
+                line-height: 1.5;
+                width: 100%;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+                animation: fadeIn 1s ease-out 0.6s backwards;
+            }
+
+            .footer p {
+                margin: 0;
+            }
+
+            /* Keyframe animations */
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-15px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(15px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .sign-img {
+                    width: 220%;
+                    max-width: none;
+                    margin: 0 0 0 -53%;
+                    left: 0;
+                }
+            }
+
+            /* Triggers on desktop mouse hover and mobile finger tap */
+            .card:hover,
+            .card:active,
+            summary.faq-summary:hover,
+            summary.faq-summary:active,
+            .back-btn:hover,
+            .back-btn:active {
+                background-color: rgba(0, 107, 63, 0.85);
+                border-color: #8edaa8;
+                transform: translateY(-4px) scale(1.02);
+                box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
+            }
+
+            /* Base styles for all devices (mobile and tap-first) */
+            .card,
+            summary.faq-summary,
+            .back-btn {
+                transition:
+                    transform 0.2s ease,
+                    background-color 0.2s ease,
+                    box-shadow 0.2s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            /* Active state for instant mobile tap feedback */
+            .card:active,
+            summary.faq-summary:active,
+            .back-btn:active {
+                transform: scale(0.98);
+                background-color: rgba(0, 107, 63, 0.9);
+            }
+
+            /* Hover effects only for devices with a real mouse cursor */
+            @media (hover: hover) {
+                .card:hover,
+                summary.faq-summary:hover,
+                .back-btn:hover {
+                    background-color: rgba(0, 107, 63, 0.85);
+                    border-color: #8edaa8;
+                    transform: translateY(-4px) scale(1.02);
+                    box-shadow: 0 8px 20px rgba(0, 107, 63, 0.6);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <img src="tx-macbeth-sign.png" alt="Theatre Xavier" class="sign-img">
+        </h1>
+
+        <p class="intro">
+            Thank you for joining us for our production of Shakespeare's Macbeth.
+            If you are interested in learning more about Theatre Xavier, click the buttons below!
+        </p>
+
+        <div class="cards">
+            <a href="about.html" class="card">
+                <h2>About Theatre Xavier</h2>
+            </a>
+            <a href="why.html" class="card">
+                <h2>Why Theatre Xavier?</h2>
+            </a>
+            <a href="roles.html" class="card">
+                <h2>Roles in Theatre Xavier</h2>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.</p>
+        </footer>
+    </body>
+</html>

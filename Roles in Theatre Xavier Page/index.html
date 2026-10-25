@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roles In Theatre Xavier</title>
+        <link rel="icon" type="image/png" href="tx-logo.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+            }
+
+            body {
+                font-family: 'Berkshire Swash', Georgia, serif;
+                padding: 15px;
+                box-sizing: border-box;
+                background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                color: #fff;
+            }
+
+            h1 {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+                animation: fadeInDown 0.8s ease-out forwards;
+            }
+
+            .sign-img {
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                object-fit: contain;
+                filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
+            }
+
+            .intro {
+                color: #fff;
+                font-size: 1rem;
+                line-height: 1.4;
+                text-align: center;
+                text-shadow: 2px 2px 6px #000;
+                max-width: 700px;
+                margin: 10px auto 15px auto;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 12px 16px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                animation: fadeInUp 0.8s ease-out 0.2s backwards;
+            }
+
+            /* Return to Main Menu Button Animation */
+            .back-btn {
+                display: inline-block;
+                padding: 12px 26px;
+                background-color: #006b3f;
+                border: 2px solid #fff;
+                border-radius: 20px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.1rem;
+                font-family: 'Berkshire Swash', Georgia, serif;
+                margin: 5px auto 20px auto;
+                text-shadow: 1px 1px 4px #000;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+                transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .back-btn:hover, .back-btn:active {
+                background-color: rgba(0, 107, 63, 0.9);
+                border-color: #8edaa8;
+                transform: translateY(-3px) scale(1.03);
+                box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
+            }
+
+            /* Category Grid Menu */
+            .category-menu {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                max-width: 500px;
+                margin: 10px auto 20px auto;
+                padding: 0 5px;
+                box-sizing: border-box;
+                animation: fadeInUp 0.8s ease-out 0.4s backwards;
+            }
+
+            @media (min-width: 600px) {
+                .category-menu {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+
+            /* Department Grid Buttons with Hover/Tap Animations */
+            .category-btn {
+                background: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                border: 2px solid #006b3f;
+                padding: 10px 12px;
+                border-radius: 20px;
+                font-family: 'Berkshire Swash', Georgia, serif;
+                font-size: 0.85rem;
+                cursor: pointer;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+                box-sizing: border-box;
+                width: 100%;
+                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .category-btn:hover, .category-btn:active {
+                background: #006b3f;
+                border-color: #8edaa8;
+                color: #fff;
+                transform: translateY(-3px) scale(1.03);
+                box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
+            }
+
+            .category-btn.active {
+                background: #006b3f;
+                border-color: #fff;
+                box-shadow: 0px 4px 10px rgba(0, 107, 63, 0.8);
+            }
+
+            /* Tab Panels */
+            .tab-panel {
+                display: none;
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+            .tab-panel.active {
+                display: block;
+            }
+
+            .tab-panel .role-list-img {
+                max-width: 580px;
+                margin: 10px auto 25px auto;
+            }
+
+            /* Keyframe Animations */
+            @keyframes fadeInDown {
+                from { opacity: 0; transform: translateY(-15px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(15px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(5px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .footer {
+                color: #fff;
+                text-align: center;
+                font-size: 0.9rem;
+                padding: 12px 16px;
+                border-radius: 10px;
+                margin-top: auto;
+                background: rgba(0, 0, 0, 0.5);
+                text-shadow: 2px 2px 6px #000;
+                line-height: 1.5;
+                width: 100%;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+                animation: fadeIn 1s ease-out 0.6s backwards;
+            }
+
+            .footer p {
+                margin: 0;
+            }
+
+            /* Universal Mobile & Desktop Button Animations */
+            .card, summary.faq-summary, .back-btn, .category-btn {
+                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+                -webkit-tap-highlight-color: transparent; /* Removes the grey highlight box on mobile taps */
+            }
+
+            /* Touch Press Effect for Mobile Devices (when a finger holds/taps the button) */
+            .card:active, summary.faq-summary:active, .back-btn:active, .category-btn:active {
+                transform: scale(0.96) !important; /* Instantly shrinks slightly to mimic a physical button press */
+                background-color: #006b3f !important;
+                border-color: #fff !important;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6) !important;
+            }
+
+            /* Hover Effect for Desktop Mouse Users */
+            @media (hover: hover) {
+                .card:hover, summary.faq-summary:hover, .back-btn:hover, .category-btn:hover {
+                background-color: rgba(0, 107, 63, 0.85);
+                border-color: #8edaa8;
+                transform: translateY(-3px) scale(1.02);
+                box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <!-- Title Banner -->
+        <h1>
+            <img src="tx-macbeth-roles-sign.png" alt="Roles in Theatre Xavier" class="sign-img">
+        </h1>
+
+        <p class="intro">
+            Tap a department below to view its roles!
+        </p>
+
+        <!-- Return to Main Menu Button -->
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">Return to Main Menu</a>
+        </div>
+
+        <!-- SINGLE Category Button Menu -->
+        <div class="category-menu">
+            <button class="category-btn active" onclick="showCategory('foh', this)">Front of House</button>
+            <button class="category-btn" onclick="showCategory('costumes', this)">Costumes</button>
+            <button class="category-btn" onclick="showCategory('lighting', this)">Lighting</button>
+            <button class="category-btn" onclick="showCategory('props', this)">Props</button>
+            <button class="category-btn" onclick="showCategory('sound', this)">Sound</button>
+            <button class="category-btn" onclick="showCategory('stage', this)">Stage & Building</button>
+            <button class="category-btn" onclick="showCategory('marketing', this)">Marketing</button>
+            <button class="category-btn" onclick="showCategory('management', this)">Stage Management</button>
+        </div>
+
+        <!-- Panels (Displays only the selected role list) -->
+        <div id="foh" class="tab-panel active">
+            <img src="tx-macbeth-front-of-house-roles-sign.png" alt="Front of House Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="costumes" class="tab-panel">
+            <img src="tx-macbeth-costumes-roles-sign.png" alt="Costume Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="lighting" class="tab-panel">
+            <img src="tx-macbeth-lighting-roles-sign.png" alt="Lighting Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="props" class="tab-panel">
+            <img src="tx-macbeth-props-roles-sign.png" alt="Props Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="sound" class="tab-panel">
+            <img src="tx-macbeth-sound-roles-sign.png" alt="Sound Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="stage" class="tab-panel">
+            <img src="tx-macbeth-stage-building-roles-sign.png" alt="Stage & Building Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="marketing" class="tab-panel">
+            <img src="tx-macbeth-marketing-roles-sign.png" alt="Marketing Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <div id="management" class="tab-panel">
+            <img src="tx-macbeth-stage-management-roles-sign.png" alt="Stage Management Roles Sign" class="sign-img role-list-img">
+        </div>
+
+        <footer class="footer">
+            <p>This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.</p>
+        </footer>
+
+        <script>
+            function showCategory(categoryId, btn) {
+                // Hide all panels
+                const panels = document.querySelectorAll('.tab-panel');
+                panels.forEach(panel => panel.classList.remove('active'));
+
+                // Remove active styling from all buttons
+                const buttons = document.querySelectorAll('.category-btn');
+                buttons.forEach(b => b.classList.remove('active'));
+
+                // Display selected panel and set button active
+                document.getElementById(categoryId).classList.add('active');
+                btn.classList.add('active');
+            }
+        </script>
+    </body>
+</html>
