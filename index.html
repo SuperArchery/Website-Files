@@ -17,7 +17,7 @@
                 height: 100dvh;
                 box-sizing: border-box;
                 overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
-                font-family: 'Berkshire Swash', Georgia, serif;
+                font-family: 'Norwester', Georgia, serif;
                 padding: 16px;
                 background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
                 background-size: cover;
@@ -29,6 +29,13 @@
                 height: 100dvh;
                 justify-content: space-between; /* Spreads header, content, and footer evenly */
             }
+            @font-face {
+    font-family: 'Norwester';
+    src: url('norwester.otf') format('opentype'),
+         url('norwester.woff') format('woff'); /* Make sure the font file path matches your repo */
+    font-weight: normal;
+    font-style: normal;
+}
 
             h1 {
                 margin: 10px 0 0 0;
@@ -96,7 +103,7 @@
                 margin: 0;
                 font-size: 1rem;
                 color: #fff;
-                font-family: 'Berkshire Swash', Georgia, serif;
+                font-family: 'Norwester', Georgia, serif;
                 text-shadow: 2px 2px 6px #000;
             }
 
