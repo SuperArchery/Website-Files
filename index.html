@@ -1,198 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Theatre Xavier - Macbeth</title>
-        <link rel="icon" type="image/png" href="tx-logo.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theatre Xavier - Macbeth</title>
+    <link rel="icon" type="image/png" href="tx-logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
 
-        <style>
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100dvh;
-                box-sizing: border-box;
-                overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
-                font-family: 'Norwester', Georgia, serif;
-                padding: 16px;
-                background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-                display: flex;
-                flex-direction: column;
-                height: 100dvh;
-                justify-content: space-between; /* Spreads header, content, and footer evenly */
-            }
-            @font-face {
-    font-family: 'Norwester';
-    src: url('norwester.otf') format('opentype'),
-         url('norwester.woff') format('woff'); /* Make sure the font file path matches your repo */
-    font-weight: normal;
-    font-style: normal;
-}
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        box-sizing: border-box;
+        overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
+        font-family: "Norwester", Georgia, serif;
+        padding: 16px;
+        background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        justify-content: space-between; /* Spreads header, content, and footer evenly */
+      }
+      @font-face {
+        font-family: "Norwester";
+        src:
+          url("norwester.otf") format("opentype"),
+          url("norwester.woff") format("woff"); /* Make sure the font file path matches your repo */
+        font-weight: normal;
+        font-style: normal;
+      }
 
-            h1 {
-                margin: 10px 0 0 0;
-                text-align: center;
-                animation: fadeInDown 0.8s ease-out forwards;
-            }
+      h1 {
+        margin: 10px 0 0 0;
+        text-align: center;
+        animation: fadeInDown 0.8s ease-out forwards;
+      }
 
-            .sign-img {
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 650px;
-                height: auto;
-                object-fit: cover;
-                object-position: center;
-                transform: translateX(-0.5px);
-                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
-            }
+      .sign-img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        transform: translateX(-0.5px);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+      }
 
-            .sign-home {
-                aspect-ratio: 3.25 / 1;
-            }
+      .sign-home {
+        aspect-ratio: 3.25 / 1;
+      }
 
-            .intro {
-                color: #fff;
-                font-size: 0.85rem;
-                line-height: 1.4;
-                text-align: center;
-                text-shadow: 2px 2px 6px #000;
-                max-width: 650px;
-                margin: 12px auto;
-                background: rgba(0, 0, 0, 0.5);
-                padding: 6px 10px;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-                animation: fadeInUp 0.8s ease-out 0.2s backwards;
-            }
+      .intro {
+        color: #fff;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        text-align: center;
+        text-shadow: 2px 2px 6px #000;
+        max-width: 650px;
+        margin: 12px auto;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 6px 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      }
 
-            .cards {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px; /* Tighter gap so buttons fit without scrolling */
-                margin: 16px 0;
-                animation: fadeInUp 0.8s ease-out 0.4s backwards;
-            }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px; /* Tighter gap so buttons fit without scrolling */
+        margin: 16px 0;
+        animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      }
 
-            .card {
-                display: block;
-                width: 100%;
-                max-width: 450px;
-                padding: 8px 16px;
-                background-color: rgba(0, 0, 0, 0.6);
-                border: 3px solid #fff;
-                border-radius: 16px;
-                text-decoration: none;
-                text-align: center;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-                box-sizing: border-box;
-                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-                -webkit-tap-highlight-color: transparent;
-            }
+      .card {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        padding: 8px 16px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 3px solid #fff;
+        border-radius: 16px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-            .card h2 {
-                margin: 0;
-                font-size: 1rem;
-                color: #fff;
-                font-family: 'Norwester', Georgia, serif;
-                text-shadow: 2px 2px 6px #000;
-            }
+      .card h2 {
+        margin: 0;
+        font-size: 1rem;
+        color: #fff;
+        font-family: "Norwester", Georgia, serif;
+        text-shadow: 2px 2px 6px #000;
+      }
 
-            .footer {
-                color: #fff;
-                text-align: center;
-                font-size: 0.8rem;
-                padding: 6px 10px;
-                border-radius: 8px;
-                background: rgba(0, 0, 0, 0.5);
-                text-shadow: 2px 2px 6px #000;
-                line-height: 1.4;
-                width: 100%;
-                max-width: 550px;
-                margin: 0 auto 82px auto;
-                box-sizing: border-box;
-                animation: fadeIn 1s ease-out 0.6s backwards;
-            }
+      .footer {
+        color: #fff;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 6px #000;
+        line-height: 1.4;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto 82px auto;
+        box-sizing: border-box;
+        animation: fadeIn 1s ease-out 0.6s backwards;
+      }
 
-            .footer p {
-                margin: 0;
-            }
+      .footer p {
+        margin: 0;
+      }
 
-            /* Keyframe animations */
-            @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-15px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      /* Keyframe animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(15px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
-            @media (max-width: 600px) {
-                .sign-img {
-                    width: 96%;
-                    max-width: none;
-                    margin: 0 auto;
-                }
-            }
+      @media (max-width: 600px) {
+        .sign-img {
+          width: 96%;
+          max-width: none;
+          margin: 0 auto;
+        }
+      }
 
-            /* Active & Hover states */
-            .card:active {
-                transform: scale(0.98);
-                background-color: rgba(0, 107, 63, 0.9);
-            }
+      /* Active & Hover states */
+      .card:active {
+        transform: scale(0.98);
+        background-color: rgba(0, 107, 63, 0.9);
+      }
 
-            @media (hover: hover) {
-                .card:hover {
-                    background-color: rgba(0, 107, 63, 0.85);
-                    border-color: #8edaa8;
-                    transform: translateY(-2px) scale(1.01);
-                    box-shadow: 0 6px 16px rgba(0, 107, 63, 0.6);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>
-            <img src="tx-macbeth-sign-2.png" alt="Theatre Xavier" class="sign-img sign-home">
-        </h1>
+      @media (hover: hover) {
+        .card:hover {
+          background-color: rgba(0, 107, 63, 0.85);
+          border-color: #8edaa8;
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0 6px 16px rgba(0, 107, 63, 0.6);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="tx-macbeth-sign-2.png"
+        alt="Theatre Xavier"
+        class="sign-img sign-home"
+      />
+    </h1>
 
-        <p class="intro">
-            Thank you for joining us for our production of Shakespeare's Macbeth.
-            If you are interested in learning more about Theatre Xavier, click the buttons below!
-        </p>
+    <p class="intro">
+      Thank you for joining us for our production of Shakespeare's Macbeth. If
+      you are interested in learning more about Theatre Xavier, click the
+      buttons below!
+    </p>
 
-        <div class="cards">
-            <a href="about.html" class="card">
-                <h2>About Theatre Xavier</h2>
-            </a>
-            
-            <a href="why.html" class="card">
-                <h2>Why Theatre Xavier?</h2>
-            </a>
+    <div class="cards">
+      <a href="about.html" class="card">
+        <h2>About Theatre Xavier</h2>
+      </a>
 
-            <a href="roles.html" class="card">
-                <h2>Roles in Theatre Xavier</h2>
-            </a>
-        </div>
+      <a href="why.html" class="card">
+        <h2>Why Theatre Xavier?</h2>
+      </a>
 
-        <footer class="footer">
-            <p>This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.</p>
-        </footer>
-    </body>
+      <a href="roles.html" class="card">
+        <h2>Roles in Theatre Xavier</h2>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <p>
+        This website was created by Dario Sedler '29 and the Front of House team
+        by Theatre Xavier.
+      </p>
+    </footer>
+  </body>
 </html>

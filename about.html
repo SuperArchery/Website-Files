@@ -1,381 +1,451 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Theatre Xavier</title>
-        <link rel="icon" type="image/png" href="tx-logo.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-        
-        <style>
-            @font-face {
-    font-family: 'Norwester';
-    src: url('norwester.otf') format('opentype'),
-         url('norwester.woff') format('woff'); /* Make sure the font file path matches your repo */
-    font-weight: normal;
-    font-style: normal;
-}
-            html, body {
-                margin: 0;
-                padding: 0;
-                height: 100dvh;
-                box-sizing: border-box;
-                overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Theatre Xavier</title>
+    <link rel="icon" type="image/png" href="tx-logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
 
-            body {
-                font-family: 'Norwester', Georgia, serif;
-                padding: 8px 16px 77px 16px;
-                background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                text-align: center;
-                color: #fff;
-            }
+    <style>
+      @font-face {
+        font-family: "Norwester";
+        src:
+          url("norwester.otf") format("opentype"),
+          url("norwester.woff") format("woff"); /* Make sure the font file path matches your repo */
+        font-weight: normal;
+        font-style: normal;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        box-sizing: border-box;
+        overflow: hidden; /* Locks page to mobile viewport to prevent unwanted scrolling */
+      }
 
-            /* Main Header Banner */
-            h1 {
-                margin: 0;
-                text-align: center;
-                animation: fadeInDown 0.8s ease-out forwards;
-            }
+      body {
+        font-family: "Norwester", Georgia, serif;
+        padding: 8px 16px 77px 16px;
+        background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        color: #fff;
+      }
 
-            .sign-img {
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                max-width: 650px;
-                height: auto;
-                object-fit: cover;
-                object-position: center;
-                filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
-            }
+      /* Main Header Banner */
+      h1 {
+        margin: 0;
+        text-align: center;
+        animation: fadeInDown 0.8s ease-out forwards;
+      }
 
-            .sign-two-line {
-                aspect-ratio: 3.25 / 1;
-            }
+      .sign-img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.6));
+      }
 
-            @media (max-width: 600px) {
-                .sign-img {
-                    width: 96%;
-                    max-width: none;
-                    margin: 0 auto;
-                }
-            }
+      .sign-two-line {
+        aspect-ratio: 3.25 / 1;
+      }
 
-            /* Container for Page Content */
-            .main-content {
-                max-width: 700px;
-                margin: 4px auto;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 5px; /* Tighter gap so everything fits on one screen */
-            }
+      @media (max-width: 600px) {
+        .sign-img {
+          width: 96%;
+          max-width: none;
+          margin: 0 auto;
+        }
+      }
 
-            /* Return to Main Menu Button & Accordion Summaries Base */
-            .back-btn, summary.faq-summary {
-                display: block;
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-                padding: 8px 14px;
-                border-radius: 14px;
-                color: #fff;
-                font-family: 'Norwester', Georgia, serif;
-                font-size: 0.95rem;
-                text-shadow: 2px 2px 6px #000;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
-                box-sizing: border-box;
-                cursor: pointer;
-                list-style: none;
-                outline: none;
-                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-                -webkit-tap-highlight-color: transparent;
-            }
+      /* Container for Page Content */
+      .main-content {
+        max-width: 700px;
+        margin: 4px auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* Tighter gap so everything fits on one screen */
+      }
 
-            .back-btn {
-                background-color: #006b3f;
-                border: 3px solid #fff;
-                text-decoration: none;
-                font-size: 1rem;
-                animation: fadeInUp 0.8s ease-out 0.2s backwards;
-            }
+      /* Return to Main Menu Button & Accordion Summaries Base */
+      .back-btn,
+      summary.faq-summary {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 8px 14px;
+        border-radius: 14px;
+        color: #fff;
+        font-family: "Norwester", Georgia, serif;
+        font-size: 0.95rem;
+        text-shadow: 2px 2px 6px #000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        cursor: pointer;
+        list-style: none;
+        outline: none;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-            summary.faq-summary {
-                background-color: rgba(0, 0, 0, 0.7);
-                border: 3px solid #fff;
-            }
+      .back-btn {
+        background-color: #006b3f;
+        border: 3px solid #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      }
 
-            /* Hide default arrow markers */
-            summary.faq-summary::-webkit-details-marker {
-                display: none;
-            }
+      summary.faq-summary {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 3px solid #fff;
+      }
 
-            /* Touch Press Effect for Mobile Devices */
-            .back-btn:active, summary.faq-summary:active {
-                transform: scale(0.96) !important;
-                background-color: #006b3f !important;
-                border-color: #fff !important;
-                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6) !important;
-            }
+      /* Hide default arrow markers */
+      summary.faq-summary::-webkit-details-marker {
+        display: none;
+      }
 
-            /* Hover Effect for Desktop Mouse Users */
-            @media (hover: hover) {
-                .back-btn:hover, summary.faq-summary:hover {
-                    background-color: rgba(0, 107, 63, 0.85);
-                    border-color: #8edaa8;
-                    transform: translateY(-2px) scale(1.01);
-                    box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
-                }
-            }
+      /* Touch Press Effect for Mobile Devices */
+      .back-btn:active,
+      summary.faq-summary:active {
+        transform: scale(0.96) !important;
+        background-color: #006b3f !important;
+        border-color: #fff !important;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6) !important;
+      }
 
-            /* Introductory text box for newcomers */
-            .intro-box {
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-                background: rgba(0, 0, 0, 0.65);
-                border: 2px solid #006b3f;
-                border-radius: 10px;
-                padding: 6px 12px;
-                text-align: center;
-                font-size: 0.82rem;
-                line-height: 1.3;
-                color: #f0f0f0;
-                text-shadow: 1px 1px 4px #000;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
-                box-sizing: border-box;
-                animation: fadeInUp 0.8s ease-out 0.3s backwards;
-            }
+      /* Hover Effect for Desktop Mouse Users */
+      @media (hover: hover) {
+        .back-btn:hover,
+        summary.faq-summary:hover {
+          background-color: rgba(0, 107, 63, 0.85);
+          border-color: #8edaa8;
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0px 6px 15px rgba(0, 107, 63, 0.6);
+        }
+      }
 
-            .intro-box p {
-                margin: 0;
-            }
+      /* Introductory text box for newcomers */
+      .intro-box {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.65);
+        border: 2px solid #006b3f;
+        border-radius: 10px;
+        padding: 6px 12px;
+        text-align: center;
+        font-size: 0.82rem;
+        line-height: 1.3;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 4px #000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        animation: fadeInUp 0.8s ease-out 0.3s backwards;
+      }
 
-            /* Dropdown Accordion Styling */
-            details.faq-dropdown {
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-                box-sizing: border-box;
-                animation: fadeInUp 0.8s ease-out 0.4s backwards;
-            }
+      .intro-box p {
+        margin: 0;
+      }
 
-            /* Expanded Answer Box - Compact & Scroll-Contained */
-            .faq-content {
-                background: rgba(0, 0, 0, 0.85);
-                border: 2px solid #006b3f;
-                border-radius: 12px;
-                padding: 6px 10px;
-                margin-top: 4px;
-                text-align: left;
-                font-size: 0.75rem;
-                line-height: 1.3;
-                color: #f0f0f0;
-                text-shadow: 1px 1px 4px #000;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
-                box-sizing: border-box;
-                max-height: 145px;
-                overflow-y: auto;
-                scrollbar-width: thin;
-                animation: fadeIn 0.25s ease-in-out;
-            }
+      /* Dropdown Accordion Styling */
+      details.faq-dropdown {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      }
 
-            .faq-content p {
-                margin: 0 0 4px 0;
-            }
+      /* Expanded Answer Box - Compact & Scroll-Contained */
+      .faq-content {
+        background: rgba(0, 0, 0, 0.85);
+        border: 2px solid #006b3f;
+        border-radius: 12px;
+        padding: 6px 10px;
+        margin-top: 4px;
+        text-align: left;
+        font-size: 0.75rem;
+        line-height: 1.3;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 4px #000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        max-height: 145px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        animation: fadeIn 0.25s ease-in-out;
+      }
 
-            .faq-content p:last-child {
-                margin-bottom: 0;
-            }
+      .faq-content p {
+        margin: 0 0 4px 0;
+      }
 
-            .faq-content a {
-                color: #8edaa8;
-                text-decoration: underline;
-            }
+      .faq-content p:last-child {
+        margin-bottom: 0;
+      }
 
-            .faq-content a:hover {
-                color: #ffffff;
-            }
+      .faq-content a {
+        color: #8edaa8;
+        text-decoration: underline;
+      }
 
-            .faq-content ul, .faq-content dl {
-                margin: 2px 0 0 0;
-                padding-left: 12px;
-            }
+      .faq-content a:hover {
+        color: #ffffff;
+      }
 
-            .faq-content li, .faq-content dd {
-                margin-bottom: 2px;
-            }
+      .faq-content ul,
+      .faq-content dl {
+        margin: 2px 0 0 0;
+        padding-left: 12px;
+      }
 
-            .faq-content dt {
-                font-weight: bold;
-                margin-top: 4px;
-                color: #fff;
-            }
+      .faq-content li,
+      .faq-content dd {
+        margin-bottom: 2px;
+      }
 
-            .show-list-container {
-                max-height: 95px;
-                overflow-y: auto;
-                scrollbar-width: thin;
-                padding-right: 4px;
-            }
+      .faq-content dt {
+        font-weight: bold;
+        margin-top: 4px;
+        color: #fff;
+      }
 
-            /* Keyframe Animations */
-            @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-15px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      .show-list-container {
+        max-height: 95px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        padding-right: 4px;
+      }
 
-            @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(15px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      /* Keyframe Animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(-4px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            /* Footer Banner */
-            .footer {
-                color: #fff;
-                text-align: center;
-                font-size: 0.78rem;
-                padding: 8px 12px;
-                border-radius: 8px;
-                background: rgba(0, 0, 0, 0.5);
-                text-shadow: 2px 2px 6px #000;
-                line-height: 1.4;
-                width: 100%;
-                max-width: 550px;
-                margin: 0 auto;
-                box-sizing: border-box;
-                animation: fadeIn 1s ease-out 0.6s backwards;
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            .footer p {
-                margin: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Top Header Banner -->
-        <h1>
-            <img src="tx-macbeth-about-tx-sign.png" alt="About Theatre Xavier" class="sign-img sign-two-line">
-        </h1>
+      /* Footer Banner */
+      .footer {
+        color: #fff;
+        text-align: center;
+        font-size: 0.78rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 6px #000;
+        line-height: 1.4;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        animation: fadeIn 1s ease-out 0.6s backwards;
+      }
 
-        <div class="main-content">
-            <!-- Return to Main Menu Button -->
-            <a href="index.html" class="back-btn">Return to Main Menu</a>
+      .footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Header Banner -->
+    <h1>
+      <img
+        src="tx-macbeth-about-tx-sign.png"
+        alt="About Theatre Xavier"
+        class="sign-img sign-two-line"
+      />
+    </h1>
 
-            <!-- Introductory Helper Box for Newcomers -->
-            <div class="intro-box">
-                <p>New to Theatre Xavier? Tap any question below to learn what we do, how to join, who to contact, and our past show history!</p>
-            </div>
+    <div class="main-content">
+      <!-- Return to Main Menu Button -->
+      <a href="index.html" class="back-btn">Return to Main Menu</a>
 
-            <!-- Question 1: What is TX -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">What Is Theatre Xavier?</summary>
-                <div class="faq-content">
-                    <p>Theatre Xavier is a place where students can learn how to act in a character, run the stage, make costumes, tweak some lights, or amplify the sound!</p>
-                </div>
-            </details>
+      <!-- Introductory Helper Box for Newcomers -->
+      <div class="intro-box">
+        <p>
+          New to Theatre Xavier? Tap any question below to learn what we do, how
+          to join, who to contact, and our past show history!
+        </p>
+      </div>
 
-            <!-- Question 2: Outcome -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">What is the outcome of Theatre Xavier?</summary>
-                <div class="faq-content">
-                    <p>At Theatre Xavier, we help students find the thing that helps them find their voice and learn to develop healthy, long-lasting friendships with the people they work with.</p>
-                </div>
-            </details>
-
-            <!-- Question 3: Frequency -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">How often do we produce shows?</summary>
-                <div class="faq-content">
-                    <p>We produce two shows a year; typically, we produce a comedy or play in the fall. In the spring, we produce a musical, which will usually have more positions available for students to participate in.</p>
-                </div>
-            </details>
-
-            <!-- Question 4: Who can join -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">Who can sign up?</summary>
-                <div class="faq-content">
-                    <p>Any current St. X student or any high school aged girl can participate.</p>
-                </div>
-            </details>
-
-            <!-- Question 5: How to sign up -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">How can I sign up for Theatre Xavier?</summary>
-                <div class="faq-content">
-                    <p>To sign up for Theatre Xavier, please reach out to tx@stxavier.org.</p>
-                </div>
-            </details>
-
-            <!-- Question 6: Contacts -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">Questions About Signing Up?</summary>
-                <div class="faq-content">
-                    <p>If you have any questions about signing up for Theatre Xavier, please reach out to tx@stxavier.org to talk to one of our program directors.</p>
-                    <dl>
-                        <dt>Nathan Gabriel (Co-Director)</dt>
-                                                
-                        <dt>Elizabeth Harris (Co-Director)</dt>
-                                                
-                        <dt>Steven Stapleton (Technical Director)</dt>
-                        
-                    </dl>
-                </div>
-            </details>
-
-            <!-- Question 7: Past Shows -->
-            <details class="faq-dropdown" name="faq-group">
-                <summary class="faq-summary">Past Shows at Theatre Xavier</summary>
-                <div class="faq-content">
-                    <p>Here are the productions we have put on over the past few years:</p>
-                    <div class="show-list-container">
-                        <ul>
-                            <li>Lord of the Flies - Fall 2016</li>
-                            <li>My Fair Lady - Spring 2017</li>
-                            <li>A Midsummer Night's Dream - Fall 2017</li>
-                            <li>Enron - Spring 2018</li>
-                            <li>It's a Wonderful Life - Fall 2018</li>
-                            <li>Legally Blonde - Spring 2019</li>
-                            <li>The Curious Incident of the Dog in the Night-Time - Fall 2019</li>
-                            <li>War of the Worlds - Fall 2020</li>
-                            <li>Illuminations - Winter 2021</li>
-                            <li>1776 - Spring 2021</li>
-                            <li>Lives of the Saints - Fall 2021</li>
-                            <li>Illuminations 2.0 - Winter 2022</li>
-                            <li>Singin' in the Rain - Spring 2022</li>
-                            <li>Romeo and Juliet - Fall 2022</li>
-                            <li>Newsies - Spring 2023</li>
-                            <li>Our Town - Fall 2023</li>
-                            <li>Illuminations Light Show 3.0 - Winter 2024</li>
-                            <li>Jesus Christ Superstar - Spring 2024</li>
-                            <li>You Can't Take It With You - Fall 2024</li>
-                            <li>TX Illuminations Light Show 4.0 - Winter 2025</li>
-                            <li>She Loves Me - Spring 2025</li>
-                            <li>Hadestown - Fall 2025</li>
-                            <li>Clue - Spring 2026</li>
-                            <li><strong>Macbeth (Current Production) - Fall 2026</strong></li>
-                        </ul>
-                    </div>
-                </div>
-            </details>
+      <!-- Question 1: What is TX -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">What Is Theatre Xavier?</summary>
+        <div class="faq-content">
+          <p>
+            Theatre Xavier is a place where students can learn how to act in a
+            character, run the stage, make costumes, tweak some lights, or
+            amplify the sound!
+          </p>
         </div>
+      </details>
 
-        <footer class="footer">
-            <p>This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.</p>
-        </footer>
-    </body>
+      <!-- Question 2: Outcome -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">
+          What is the outcome of Theatre Xavier?
+        </summary>
+        <div class="faq-content">
+          <p>
+            At Theatre Xavier, we help students find the thing that helps them
+            find their voice and learn to develop healthy, long-lasting
+            friendships with the people they work with.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 3: Frequency -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">How often do we produce shows?</summary>
+        <div class="faq-content">
+          <p>
+            We produce two shows a year; typically, we produce a comedy or play
+            in the fall. In the spring, we produce a musical, which will usually
+            have more positions available for students to participate in.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 4: Who can join -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">Who can sign up?</summary>
+        <div class="faq-content">
+          <p>
+            Any current St. X student or any high school aged girl can
+            participate.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 5: How to sign up -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">
+          How can I sign up for Theatre Xavier?
+        </summary>
+        <div class="faq-content">
+          <p>
+            To sign up for Theatre Xavier, please reach out to tx@stxavier.org.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 6: Contacts -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">Questions About Signing Up?</summary>
+        <div class="faq-content">
+          <p>
+            If you have any questions about signing up for Theatre Xavier,
+            please reach out to tx@stxavier.org to talk to one of our program
+            directors.
+          </p>
+          <dl>
+            <dt>Nathan Gabriel (Co-Director)</dt>
+
+            <dt>Elizabeth Harris (Co-Director)</dt>
+
+            <dt>Steven Stapleton (Technical Director)</dt>
+          </dl>
+        </div>
+      </details>
+
+      <!-- Question 7: Past Shows -->
+      <details class="faq-dropdown" name="faq-group">
+        <summary class="faq-summary">Past Shows at Theatre Xavier</summary>
+        <div class="faq-content">
+          <p>
+            Here are the productions we have put on over the past few years:
+          </p>
+          <div class="show-list-container">
+            <ul>
+              <li>Lord of the Flies - Fall 2016</li>
+              <li>My Fair Lady - Spring 2017</li>
+              <li>A Midsummer Night's Dream - Fall 2017</li>
+              <li>Enron - Spring 2018</li>
+              <li>It's a Wonderful Life - Fall 2018</li>
+              <li>Legally Blonde - Spring 2019</li>
+              <li>
+                The Curious Incident of the Dog in the Night-Time - Fall 2019
+              </li>
+              <li>War of the Worlds - Fall 2020</li>
+              <li>Illuminations - Winter 2021</li>
+              <li>1776 - Spring 2021</li>
+              <li>Lives of the Saints - Fall 2021</li>
+              <li>Illuminations 2.0 - Winter 2022</li>
+              <li>Singin' in the Rain - Spring 2022</li>
+              <li>Romeo and Juliet - Fall 2022</li>
+              <li>Newsies - Spring 2023</li>
+              <li>Our Town - Fall 2023</li>
+              <li>Illuminations Light Show 3.0 - Winter 2024</li>
+              <li>Jesus Christ Superstar - Spring 2024</li>
+              <li>You Can't Take It With You - Fall 2024</li>
+              <li>TX Illuminations Light Show 4.0 - Winter 2025</li>
+              <li>She Loves Me - Spring 2025</li>
+              <li>Hadestown - Fall 2025</li>
+              <li>Clue - Spring 2026</li>
+              <li><strong>Macbeth (Current Production) - Fall 2026</strong></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <footer class="footer">
+      <p>
+        This website was created by Dario Sedler '29 and the Front of House team
+        by Theatre Xavier.
+      </p>
+    </footer>
+  </body>
 </html>

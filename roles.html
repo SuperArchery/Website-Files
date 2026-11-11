@@ -1,389 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Roles In Theatre Xavier</title>
-        <link rel="icon" type="image/png" href="tx-logo.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-        
-        <style>
-            html, body {
-                margin: 0;
-                padding: 0;
-                height: 100dvh;
-                overflow: hidden; /* Locks page scroll completely */
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roles In Theatre Xavier</title>
+    <link rel="icon" type="image/png" href="tx-logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
 
-            @font-face {
-                font-family: 'Norwester';
-                src: url('norwester.otf') format('opentype'),
-                     url('norwester.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        overflow: hidden; /* Locks page scroll completely */
+      }
 
-            body {
-                font-family: 'Norwester', Georgia, serif;
-                padding: 4px 8px;
-                box-sizing: border-box;
-                background-color: #ffffff;
-                background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                color: #fff;
-                justify-content: space-between;
-            }
+      @font-face {
+        font-family: "Norwester";
+        src:
+          url("norwester.otf") format("opentype"),
+          url("norwester.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-            h1 {
-                margin: 2px 0;
-                width: 100%;
-                text-align: center;
-                line-height: 0;
-                animation: fadeInDown 0.8s ease-out forwards;
-            }
+      body {
+        font-family: "Norwester", Georgia, serif;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        background-image: url("16ee6522b7264cfc829765f2b9acf2c0.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        justify-content: space-between;
+      }
 
-            .sign-img {
-                margin: 0 auto;
-                display: block;
-                width: 72%;
-                max-width: 340px;
-                height: auto;
-                object-fit: contain;
-                filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
-            }
+      h1 {
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+        line-height: 0;
+        animation: fadeInDown 0.8s ease-out forwards;
+      }
 
-            .intro {
-                color: #fff;
-                font-size: 0.85rem;
-                line-height: 1.3;
-                text-align: center;
-                text-shadow: 2px 2px 6px #000;
-                max-width: 480px;
-                margin: 6px auto;
-                background: rgba(0, 0, 0, 0.65);
-                padding: 7px 12px;
-                border-radius: 10px;
-                box-sizing: border-box;
-                animation: fadeInUp 0.8s ease-out 0.2s backwards;
-            }
+      .sign-img {
+        margin: 0 auto;
+        display: block;
+        width: 72%;
+        max-width: 340px;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.6));
+      }
 
-            /* Side-by-side Button Row */
-            .button-row {
-                display: flex;
-                width: 100%;
-                max-width: 440px;
-                gap: 8px;
-                margin: 6px auto;
-                box-sizing: border-box;
-            }
+      .intro {
+        color: #fff;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        text-align: center;
+        text-shadow: 2px 2px 6px #000;
+        max-width: 480px;
+        margin: 6px auto;
+        background: rgba(0, 0, 0, 0.65);
+        padding: 7px 12px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      }
 
-            .action-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex: 1;
-                margin: 0;
-                padding: 10px 12px;
-                background-color: #006b3f;
-                border: 2px solid #fff;
-                border-radius: 24px;
-                color: #fff;
-                text-decoration: none;
-                font-size: 0.88rem;
-                font-family: 'Norwester', Georgia, serif;
-                text-shadow: 1px 1px 4px #000;
-                box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
-                transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-                -webkit-tap-highlight-color: transparent;
-                cursor: pointer;
-            }
+      /* Side-by-side Button Row */
+      .button-row {
+        display: flex;
+        width: 100%;
+        max-width: 440px;
+        gap: 8px;
+        margin: 6px auto;
+        box-sizing: border-box;
+      }
 
-            .action-btn:hover, .action-btn:active {
-                background-color: rgba(0, 107, 63, 0.9);
-                border-color: #8edaa8;
-                transform: translateY(-2px) scale(1.02);
-                box-shadow: 0px 5px 12px rgba(0, 107, 63, 0.6);
-            }
+      .action-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        margin: 0;
+        padding: 10px 12px;
+        background-color: #006b3f;
+        border: 2px solid #fff;
+        border-radius: 24px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-family: "Norwester", Georgia, serif;
+        text-shadow: 1px 1px 4px #000;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+        transition:
+          transform 0.25s ease,
+          background-color 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+      }
 
-            /* Category Grid Menu with Thick Pill Buttons */
-            .category-menu {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 4px;
-                max-width: 360px;
-                margin: 2px auto;
-                padding: 0 2px;
-                box-sizing: border-box;
-                animation: fadeInUp 0.8s ease-out 0.4s backwards;
-            }
+      .action-btn:hover,
+      .action-btn:active {
+        background-color: rgba(0, 107, 63, 0.9);
+        border-color: #8edaa8;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0px 5px 12px rgba(0, 107, 63, 0.6);
+      }
 
-            .category-btn {
-                background: rgba(0, 0, 0, 0.7);
-                color: #fff;
-                border: 2px solid #006b3f;
-                padding: 10px 14px; /* Thicker pill shape */
-                border-radius: 24px; /* Deep rounded corners */
-                font-family: 'Norwester', Georgia, serif;
-                font-size: 0.78rem;
-                cursor: pointer;
-                box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
-                box-sizing: border-box;
-                width: 100%;
-                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-                -webkit-tap-highlight-color: transparent;
-            }
+      /* Category Grid Menu with Thick Pill Buttons */
+      .category-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        max-width: 360px;
+        margin: 2px auto;
+        padding: 0 2px;
+        box-sizing: border-box;
+        animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      }
 
-            .category-btn:hover, .category-btn:active {
-                background: #006b3f;
-                border-color: #8edaa8;
-                color: #fff;
-                transform: translateY(-2px) scale(1.02);
-                box-shadow: 0px 5px 12px rgba(0, 107, 63, 0.6);
-            }
+      .category-btn {
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border: 2px solid #006b3f;
+        padding: 10px 14px; /* Thicker pill shape */
+        border-radius: 24px; /* Deep rounded corners */
+        font-family: "Norwester", Georgia, serif;
+        font-size: 0.78rem;
+        cursor: pointer;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        width: 100%;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-            .category-btn.active {
-                background: #006b3f;
-                border-color: #fff;
-                box-shadow: 0px 3px 8px rgba(0, 107, 63, 0.8);
-            }
+      .category-btn:hover,
+      .category-btn:active {
+        background: #006b3f;
+        border-color: #8edaa8;
+        color: #fff;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0px 5px 12px rgba(0, 107, 63, 0.6);
+      }
 
-            .category-btn.full-width {
-                grid-column: 1 / -1;
-                width: 65%;
-                justify-self: center;
-                padding: 10px 14px;
-                border-radius: 24px;
-            }
+      .category-btn.active {
+        background: #006b3f;
+        border-color: #fff;
+        box-shadow: 0px 3px 8px rgba(0, 107, 63, 0.8);
+      }
 
-            /* Tab Panels */
-            .tab-panel {
-                display: none;
-                animation: fadeIn 0.3s ease-in-out;
-                width: 100%;
-                margin: 4px 0;
-            }
+      .category-btn.full-width {
+        grid-column: 1 / -1;
+        width: 65%;
+        justify-self: center;
+        padding: 10px 14px;
+        border-radius: 24px;
+      }
 
-            .tab-panel.active {
-                display: block;
-            }
+      /* Tab Panels */
+      .tab-panel {
+        display: none;
+        animation: fadeIn 0.3s ease-in-out;
+        width: 100%;
+        margin: 4px 0;
+      }
 
-            .tab-panel .role-list-img {
-                max-width: 420px;
-                width: 90%;
-                margin: 0 auto;
-                display: block;
-                filter: brightness(1.8) contrast(1.1) drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
-            }
+      .tab-panel.active {
+        display: block;
+      }
 
-            /* Keyframe Animations */
-            @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      .tab-panel .role-list-img {
+        max-width: 420px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        filter: brightness(1.8) contrast(1.1)
+          drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.8));
+      }
 
-            @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      /* Keyframe Animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(3px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            /* Popup Modal Styles */
-            .modal-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0, 0, 0, 0.8);
-                backdrop-filter: blur(4px);
-                z-index: 9999;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.25s ease-in-out;
-            }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(3px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            .modal-overlay.active {
-                opacity: 1;
-                pointer-events: auto;
-            }
+      /* Popup Modal Styles */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease-in-out;
+      }
 
-            .modal-box {
-                width: 85%;
-                max-width: 320px;
-                padding: 22px;
-                background: #171a19;
-                border: 3px solid #006b3f;
-                border-radius: 16px;
-                color: #fff;
-                text-align: center;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
-                transform: scale(0.9);
-                transition: transform 0.25s ease-in-out;
-            }
+      .modal-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-            .modal-overlay.active .modal-box {
-                transform: scale(1);
-            }
+      .modal-box {
+        width: 85%;
+        max-width: 320px;
+        padding: 22px;
+        background: #171a19;
+        border: 3px solid #006b3f;
+        border-radius: 16px;
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+        transform: scale(0.9);
+        transition: transform 0.25s ease-in-out;
+      }
 
-            .modal-box p {
-                margin: 0 0 16px 0;
-                font-size: 0.95rem;
-                line-height: 1.4;
-                text-shadow: 1px 1px 4px #000;
-            }
+      .modal-overlay.active .modal-box {
+        transform: scale(1);
+      }
 
-            .modal-close-btn {
-                display: inline-block;
-                padding: 8px 20px;
-                background: #006b3f;
-                border: 2px solid #fff;
-                border-radius: 12px;
-                color: #fff;
-                font-family: 'Berkshire Swash', Georgia, serif;
-                font-size: 0.9rem;
-                cursor: pointer;
-                text-shadow: 1px 1px 3px #000;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
-            }
+      .modal-box p {
+        margin: 0 0 16px 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        text-shadow: 1px 1px 4px #000;
+      }
 
-            .modal-close-btn:hover {
-                background-color: rgba(0, 107, 63, 0.9);
-                border-color: #8edaa8;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Title Banner -->
-        <h1>
-            <img src="tx-macbeth-roles-sign.png" alt="Roles in Theatre Xavier" class="sign-img">
-        </h1>
+      .modal-close-btn {
+        display: inline-block;
+        padding: 8px 20px;
+        background: #006b3f;
+        border: 2px solid #fff;
+        border-radius: 12px;
+        color: #fff;
+        font-family: "Berkshire Swash", Georgia, serif;
+        font-size: 0.9rem;
+        cursor: pointer;
+        text-shadow: 1px 1px 3px #000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+      }
 
-        <p class="intro">
-            Tap a department below to view its roles!
+      .modal-close-btn:hover {
+        background-color: rgba(0, 107, 63, 0.9);
+        border-color: #8edaa8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title Banner -->
+    <h1>
+      <img
+        src="tx-macbeth-roles-sign.png"
+        alt="Roles in Theatre Xavier"
+        class="sign-img"
+      />
+    </h1>
+
+    <p class="intro">Tap a department below to view its roles!</p>
+
+    <!-- SIDE-BY-SIDE BUTTON ROW -->
+    <div class="button-row">
+      <a href="index.html" class="action-btn">Return to Main Menu</a>
+      <button type="button" class="action-btn" id="openModalBtn">
+        Website Credits
+      </button>
+    </div>
+
+    <!-- SINGLE Category Button Menu -->
+    <div class="category-menu">
+      <button
+        class="category-btn full-width active"
+        onclick="showCategory('acting', this)"
+      >
+        Acting
+      </button>
+      <button class="category-btn" onclick="showCategory('foh', this)">
+        Front of House
+      </button>
+      <button class="category-btn" onclick="showCategory('costumes', this)">
+        Costumes
+      </button>
+      <button class="category-btn" onclick="showCategory('lighting', this)">
+        Lighting
+      </button>
+      <button class="category-btn" onclick="showCategory('props', this)">
+        Props
+      </button>
+      <button class="category-btn" onclick="showCategory('sound', this)">
+        Sound
+      </button>
+      <button class="category-btn" onclick="showCategory('stage', this)">
+        Stage & Building
+      </button>
+      <button class="category-btn" onclick="showCategory('marketing', this)">
+        Marketing
+      </button>
+      <button class="category-btn" onclick="showCategory('management', this)">
+        Stage Management
+      </button>
+    </div>
+
+    <!-- Tab Panels Container -->
+    <div id="acting" class="tab-panel active">
+      <img
+        src="tx-macbeth-acting-roles-sign.png"
+        alt="Acting Roles"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="foh" class="tab-panel">
+      <img
+        src="tx-macbeth-front-of-house-roles-sign.png"
+        alt="Front of House Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="costumes" class="tab-panel">
+      <img
+        src="tx-macbeth-costumes-roles-sign.png"
+        alt="Costume Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="lighting" class="tab-panel">
+      <img
+        src="tx-macbeth-lighting-roles-sign.png"
+        alt="Lighting Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="props" class="tab-panel">
+      <img
+        src="tx-macbeth-props-roles-sign.png"
+        alt="Props Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="sound" class="tab-panel">
+      <img
+        src="tx-macbeth-sound-roles-sign.png"
+        alt="Sound Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="stage" class="tab-panel">
+      <img
+        src="tx-macbeth-stage-building-roles-sign.png"
+        alt="Stage & Building Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="marketing" class="tab-panel">
+      <img
+        src="tx-macbeth-marketing-roles-sign.png"
+        alt="Marketing Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <div id="management" class="tab-panel">
+      <img
+        src="tx-macbeth-stage-management-roles-sign.png"
+        alt="Stage Management Roles Sign"
+        class="sign-img role-list-img"
+      />
+    </div>
+
+    <!-- CREDITS POPUP MODAL -->
+    <div class="modal-overlay" id="creditsModal">
+      <div class="modal-box">
+        <p>
+          This website was created by Dario Sedler '29 and the Front of House
+          team by Theatre Xavier.
         </p>
+        <button type="button" class="modal-close-btn" id="closeModalBtn">
+          Close
+        </button>
+      </div>
+    </div>
 
-        <!-- SIDE-BY-SIDE BUTTON ROW -->
-        <div class="button-row">
-            <a href="index.html" class="action-btn">Return to Main Menu</a>
-            <button type="button" class="action-btn" id="openModalBtn">Website Credits</button>
-        </div>
+    <script>
+      function showCategory(categoryId, btnElement) {
+        // Hide all panels
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+          panel.classList.remove("active");
+        });
 
-        <!-- SINGLE Category Button Menu -->
-        <div class="category-menu">
-            <button class="category-btn full-width active" onclick="showCategory('acting', this)">Acting</button>
-            <button class="category-btn" onclick="showCategory('foh', this)">Front of House</button>
-            <button class="category-btn" onclick="showCategory('costumes', this)">Costumes</button>
-            <button class="category-btn" onclick="showCategory('lighting', this)">Lighting</button>
-            <button class="category-btn" onclick="showCategory('props', this)">Props</button>
-            <button class="category-btn" onclick="showCategory('sound', this)">Sound</button>
-            <button class="category-btn" onclick="showCategory('stage', this)">Stage & Building</button>
-            <button class="category-btn" onclick="showCategory('marketing', this)">Marketing</button>
-            <button class="category-btn" onclick="showCategory('management', this)">Stage Management</button>
-        </div>
+        // Remove active state from all buttons
+        document.querySelectorAll(".category-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
 
-        <!-- Tab Panels Container -->
-        <div id="acting" class="tab-panel active">
-            <img src="tx-macbeth-acting-roles-sign.png" alt="Acting Roles" class="sign-img role-list-img">
-        </div>
+        // Show selected panel & highlight active button
+        const targetPanel = document.getElementById(categoryId);
+        if (targetPanel) {
+          targetPanel.classList.add("active");
+        }
+        if (btnElement) {
+          btnElement.classList.add("active");
+        }
+      }
 
-        <div id="foh" class="tab-panel">
-            <img src="tx-macbeth-front-of-house-roles-sign.png" alt="Front of House Roles Sign" class="sign-img role-list-img">
-        </div>
+      // Modal Popup Logic
+      const modal = document.getElementById("creditsModal");
+      const openBtn = document.getElementById("openModalBtn");
+      const closeBtn = document.getElementById("closeModalBtn");
 
-        <div id="costumes" class="tab-panel">
-            <img src="tx-macbeth-costumes-roles-sign.png" alt="Costume Roles Sign" class="sign-img role-list-img">
-        </div>
+      if (openBtn && modal && closeBtn) {
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.classList.add("active");
+        });
 
-        <div id="lighting" class="tab-panel">
-            <img src="tx-macbeth-lighting-roles-sign.png" alt="Lighting Roles Sign" class="sign-img role-list-img">
-        </div>
+        closeBtn.addEventListener("click", () => {
+          modal.classList.remove("active");
+        });
 
-        <div id="props" class="tab-panel">
-            <img src="tx-macbeth-props-roles-sign.png" alt="Props Roles Sign" class="sign-img role-list-img">
-        </div>
-
-        <div id="sound" class="tab-panel">
-            <img src="tx-macbeth-sound-roles-sign.png" alt="Sound Roles Sign" class="sign-img role-list-img">
-        </div>
-
-        <div id="stage" class="tab-panel">
-            <img src="tx-macbeth-stage-building-roles-sign.png" alt="Stage & Building Roles Sign" class="sign-img role-list-img">
-        </div>
-
-        <div id="marketing" class="tab-panel">
-            <img src="tx-macbeth-marketing-roles-sign.png" alt="Marketing Roles Sign" class="sign-img role-list-img">
-        </div>
-
-        <div id="management" class="tab-panel">
-            <img src="tx-macbeth-stage-management-roles-sign.png" alt="Stage Management Roles Sign" class="sign-img role-list-img">
-        </div>
-
-        <!-- CREDITS POPUP MODAL -->
-        <div class="modal-overlay" id="creditsModal">
-            <div class="modal-box">
-                <p>This website was created by Dario Sedler '29 and the Front of House team by Theatre Xavier.</p>
-                <button type="button" class="modal-close-btn" id="closeModalBtn">Close</button>
-            </div>
-        </div>
-
-        <script>
-            function showCategory(categoryId, btnElement) {
-                // Hide all panels
-                document.querySelectorAll('.tab-panel').forEach(panel => {
-                    panel.classList.remove('active');
-                });
-
-                // Remove active state from all buttons
-                document.querySelectorAll('.category-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-
-                // Show selected panel & highlight active button
-                const targetPanel = document.getElementById(categoryId);
-                if (targetPanel) {
-                    targetPanel.classList.add('active');
-                }
-                if (btnElement) {
-                    btnElement.classList.add('active');
-                }
-            }
-
-            // Modal Popup Logic
-            const modal = document.getElementById('creditsModal');
-            const openBtn = document.getElementById('openModalBtn');
-            const closeBtn = document.getElementById('closeModalBtn');
-
-            if (openBtn && modal && closeBtn) {
-                openBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    modal.classList.add('active');
-                });
-
-                closeBtn.addEventListener('click', () => {
-                    modal.classList.remove('active');
-                });
-
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        modal.classList.remove('active');
-                    }
-                });
-            }
-        </script>
-    </body>
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
